@@ -1,14 +1,13 @@
 /**
  * Module dependencies.
  */
-import app from '../app';
+import {app, knex} from '../app';
 import debugLib from 'debug';
-import http from 'http';
 const debug = debugLib('oxybridge-back:server');
+const PORT = process.env.PORT || 3000;
 // ..generated code below.
 
 //const app = require('../app');
-app.listen(3000, () => {
-  console.log('server is listen');
+app.listen(PORT, () => {
+  console.log(`[OXYBRIDGE - API] Server is listening on port: ${PORT}`);
 });
-console.log(app);
