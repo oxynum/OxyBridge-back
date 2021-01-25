@@ -1,7 +1,7 @@
 /**
  * Module dependencies.
  */
-import {app, knex} from '../app';
+import {app} from '../app';
 import debugLib from 'debug';
 const debug = debugLib('oxybridge-back:server');
 const PORT = process.env.PORT || 3000;

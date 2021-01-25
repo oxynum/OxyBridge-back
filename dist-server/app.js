@@ -3,12 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "knex", {
-  enumerable: true,
-  get: function get() {
-    return _config["default"];
-  }
-});
 exports.app = void 0;
 
 var _express = _interopRequireDefault(require("express"));
@@ -22,8 +16,6 @@ var _morgan = _interopRequireDefault(require("morgan"));
 var _index = _interopRequireDefault(require("./routes/index"));
 
 var _users = _interopRequireDefault(require("./routes/users"));
-
-var _config = _interopRequireDefault(require("./DB_CONFIG/config"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
