@@ -3,26 +3,20 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
-
-var knex = require('knex')({
+exports.CONFIG_MYSQL = void 0;
+var CONFIG_MYSQL = {
   client: 'mysql',
   connection: {
     host: 'localhost',
+    // process.env.MYSQL_HOST
     port: 3306,
+    // process.env.MYSQL_PORT
     user: 'root',
+    // process.env.MYSQL_USERNAME
     password: 'root',
-    database: 'myapp_test'
-  }
-});
+    // process.env.MYSQL_PASSWORD
+    database: 'myapp_test' // process.env.MYSQL_DATABASE
 
-knex.raw("SELECT VERSION()").then(function (version) {
-  return console.log(version[0][0]);
-})["catch"](function (err) {
-  console.log(err);
-  throw err;
-})["finally"](function () {
-  knex.destroy();
-});
-var _default = knex;
-exports["default"] = _default;
+  }
+};
+exports.CONFIG_MYSQL = CONFIG_MYSQL;
