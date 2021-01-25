@@ -1,21 +1,18 @@
 "use strict";
 
-var _app = _interopRequireDefault(require("../app"));
+var _app = require("../app");
 
 var _debug = _interopRequireDefault(require("debug"));
-
-var _http = _interopRequireDefault(require("http"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 /**
  * Module dependencies.
  */
-var debug = (0, _debug["default"])('oxybridge-back:server'); // ..generated code below.
+var debug = (0, _debug["default"])('oxybridge-back:server');
+var PORT = process.env.PORT || 3000; // ..generated code below.
 //const app = require('../app');
 
-_app["default"].listen(3000, function () {
-  console.log('server is listen');
+_app.app.listen(PORT, function () {
+  console.log("[OXYBRIDGE - API] Server is listening on port: ".concat(PORT));
 });
-
-console.log(_app["default"]);
